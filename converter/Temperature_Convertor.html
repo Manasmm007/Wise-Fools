@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+body{
+margin:0;
+}
+    </style>
+    <title>Convert Ease</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJCL1L95X0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZJCL1L95X0');
+</script>
+</head>
+<body>
+<video autoplay muted loop id="myVideo">
+  <source src=".././winter.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+<div class="content">
+<table><colgroup width="30%"></colgroup>
+    <tr><td>
+    <p><a href="Area_Convertor.html">Area</a></p>
+    <p><a href="Mass_Convertor.html">Mass</a></p>
+    <p><a href="BMI_Calculator.html">BMI</a></p>
+    </td>
+    <td>
+        <h1>Temperature Converter</h1>
+    <label for="temperature">Enter Temperature (Decimal up to 2 points):</label>
+    <input type="number" step="0.01" id="temperature"><br>
+
+    <label for="fromUnit">Select Initial Unit:</label>
+    <select id="fromUnit">
+        <option value="kelvin">Kelvin</option>
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+    </select><br>
+
+    <label for="toUnit">Select Unit for Conversion:</label>
+    <select id="toUnit">
+        <option value="kelvin">Kelvin</option>
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+    </select><br>
+
+    <button onclick="convertTemperature()">Convert</button>
+    <script src="function_convert_Temperature.js"></script>
+
+    <p id="result">Result: </p>
+    
+    </td>
+    </tr>
+    
+    </table>
+</div>
+</body>
+</html>
